@@ -1,10 +1,10 @@
 - 👋 Hi, I’m @KVinnyVids
-- 👀 I’m interested in nothing
-- 🌱 I’m currently learning java
-- 💞️ I’m looking to collaborate on someone
-- 📫 How to reach me , dk
-- 😄 Pronouns: really..
-- ⚡ Fun fact: u k,i dk
+- 👀 I’m interested in something
+- 🌱 I’m currently learning something
+- 💞️ I’m looking to collaborate with someone
+- 📫 How to reach me: Don't know
+- 😄 Pronouns: Really...  (º_º )
+- ⚡ Fun fact: You know,I don't care.
 
 <!---
 KVinnyVids/KVinnyVids is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
