@@ -3,8 +3,8 @@
 - 🌱 I’m currently learning something
 - 💞️ I’m looking to collaborate with someone
 - 📫 How to reach me: Don't know
-- 😄 Pronouns: Really...  (º_º )
-- ⚡ Fun fact: You know,I don't care.
+- 😄 Pronouns: Really...  (-_- ) he/him
+- ⚡ Fun fact: What ever you know,I don't care.
 
 <!---
 KVinnyVids/KVinnyVids is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
