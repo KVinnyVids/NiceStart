@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name='Cosmos1'>#8C3545</color>
+    <color name='Cosmos2'>#D98BB6</color>
+    <color name='Cosmos3'>#8149A6</color>
+    <color name='Cosmos4'>#030526</color>
+    <color name='Cosmos5'>#071540</color>
+</resources>

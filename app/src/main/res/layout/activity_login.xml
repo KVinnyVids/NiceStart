@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".LogIn">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guia1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guia2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guia3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guia4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <ImageView
+        android:id="@+id/girl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:scaleType="fitStart"
+        android:src="@drawable/girl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.0"
+        android:background="@color/Cosmos3" />
+
+    <ImageView
+        android:id="@+id/Img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:src="@mipmap/ic_icon"
+        app:layout_constraintBottom_toBottomOf="@id/guia4"
+        app:layout_constraintEnd_toEndOf="@id/guia2"
+        app:layout_constraintStart_toStartOf="@id/guia1"
+        app:layout_constraintTop_toTopOf="@id/main" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fill"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@id/guia2"
+        app:layout_constraintStart_toStartOf="@id/guia1"
+        app:layout_constraintTop_toBottomOf="@id/guia4"
+        app:startIconDrawable="@drawable/ic_cookie">
+
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.4"
+            android:background="@color/white"
+            android:hint="@string/name"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fill2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/guia2"
+        app:layout_constraintStart_toStartOf="@id/guia1"
+        app:layout_constraintTop_toBottomOf="@id/fill"
+        app:startIconDrawable="@drawable/ic_cookie">
+
+        <EditText
+            android:id="@+id/Password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:alpha="0.4"
+            android:background="@color/white"
+            android:hint="@string/password"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/Back"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/Cosmos2"
+        android:text="@string/back"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/main"
+        app:layout_constraintEnd_toEndOf="@id/guia2"
+        app:layout_constraintStart_toEndOf="@id/Continue"
+        app:layout_constraintTop_toTopOf="@id/guia4"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/Continue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/Cosmos4"
+        android:text="@string/Continue"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/main"
+        app:layout_constraintEnd_toStartOf="@id/Back"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/guia1"
+        app:layout_constraintTop_toTopOf="@id/guia4" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Cosmos3"
+
+        android:text="@string/registrarse"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/main"
+        app:layout_constraintEnd_toEndOf="@id/main"
+        app:layout_constraintStart_toStartOf="@id/main"
+        app:layout_constraintTop_toTopOf="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

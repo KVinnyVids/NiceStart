@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AntiVirus</string>
+    <string name="jaja">Jaja</string>
+    <string name="jojo">jojo</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="continue">Continue</string>
+    <string name="Continue">Continue</string>
+    <string name="Back">Back</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="continue">Continue</string>
+    <string name="back">Back</string>
+</resources>
