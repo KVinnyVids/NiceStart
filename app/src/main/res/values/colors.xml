@@ -2,9 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name='Cosmos1'>#8C3545</color>
-    <color name='Cosmos2'>#D98BB6</color>
-    <color name='Cosmos3'>#8149A6</color>
-    <color name='Cosmos4'>#030526</color>
-    <color name='Cosmos5'>#071540</color>
+    <color name='Red'>#8C3545</color>
+    <color name='Pink'>#D98BB6</color>
+    <color name='Purple'>#8149A6</color>
+    <color name='DarkerBlue'>#030526</color>
+    <color name='DarkBlue'>#071540</color>
+    <color name='Lavanda'>#B8B6F2</color>
+    <color name='Blue'>#6B98F2</color>
+    <color name='Yellow'>#F2CB05</color>
+    <color name='Orange'>#D9A404</color>
+    <color name='Brown'>#8C4949</color>
 </resources>
