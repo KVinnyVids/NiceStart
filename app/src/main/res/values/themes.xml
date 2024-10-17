@@ -5,5 +5,8 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.AntiVirus" parent="Base.Theme.AntiVirus" />
+    <style name="Theme.AntiVirus.ActionBar" parent="Theme.Material3.DayNight">
+
+    </style>
+
 </resources>

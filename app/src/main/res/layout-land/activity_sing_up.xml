@@ -51,10 +51,10 @@
 
     <ImageView
         android:id="@+id/Img"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
         android:layout_margin="40dp"
-        android:src="@mipmap/ic_icon"
+        android:src="@drawable/ic_cookie_sing_up"
         app:layout_constraintBottom_toBottomOf="@id/guia4"
         app:layout_constraintEnd_toEndOf="@id/guia2"
         app:layout_constraintStart_toStartOf="@id/guia1"
@@ -64,15 +64,16 @@
         android:id="@+id/fill"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
         android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@id/guia2"
+        app:layout_constraintEnd_toStartOf="@id/fill2"
         app:layout_constraintStart_toStartOf="@id/guia1"
         app:layout_constraintTop_toBottomOf="@id/guia4"
         app:startIconDrawable="@drawable/ic_cookie"
         >
         <EditText
             android:id="@+id/Name"
-            android:hint="@string/name"
+            android:hint="@string/full_name"
             style="@style/TextField" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -81,7 +82,26 @@
         android:id="@+id/fill2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="5dp"
         app:layout_constraintEnd_toEndOf="@id/guia2"
+        app:layout_constraintStart_toEndOf="@id/fill"
+        app:layout_constraintTop_toBottomOf="@id/guia4"
+        app:startIconDrawable="@drawable/ic_cookie">
+
+        <EditText
+            android:id="@+id/Email"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email"
+            style="@style/TextField" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fill3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toStartOf="@id/fill4"
         app:layout_constraintStart_toStartOf="@id/guia1"
         app:layout_constraintTop_toBottomOf="@id/fill"
         app:startIconDrawable="@drawable/ic_cookie"
@@ -93,12 +113,30 @@
             style="@style/TextField" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fill4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintEnd_toEndOf="@id/guia2"
+        app:layout_constraintStart_toEndOf="@id/fill3"
+        app:layout_constraintTop_toBottomOf="@id/fill2"
+        app:startIconDrawable="@drawable/ic_cookie"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/ConfirmPassword"
+            android:hint="@string/repeat_password"
+            style="@style/TextField" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
     <Button
         android:id="@+id/Continue"
         android:text="@string/Continue"
         app:layout_constraintEnd_toStartOf="@id/guia2"
         app:layout_constraintStart_toStartOf="@id/guia1"
-        app:layout_constraintTop_toBottomOf="@id/fill2"
+        app:layout_constraintTop_toBottomOf="@id/fill4"
         app:layout_constraintBottom_toTopOf="@id/Back"
         app:cornerRadius="0dp"
         style="@style/FlatButton_Continue" />
@@ -106,6 +144,7 @@
     <Button
         android:id="@+id/Back"
         android:text="@string/back"
+        android:onClick="openLogIn"
         app:layout_constraintEnd_toStartOf="@id/guia2"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@id/guia1"
@@ -114,14 +153,5 @@
         app:cornerRadius="0dp"
         style="@style/FlatButton_Back" />
 
-    <Button
-        android:id="@+id/button"
-        android:text="@string/registrarse"
-        android:onClick="openSingUp"
-        app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="@id/main"
-        app:layout_constraintEnd_toEndOf="@id/main"
-        app:layout_constraintStart_toStartOf="@id/main"
-        style="@style/FlatButton_Register" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
