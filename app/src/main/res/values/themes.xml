@@ -9,4 +9,21 @@
 
     </style>
 
+    <style name="Theme.AntiVirus.ActionBar.Transparent" parent="Theme.MaterialComponents.DayNight">
+        <!-- Mantener el ActionBar y hacerlo superponer el contenido -->
+        <item name="windowActionBar">true</item>
+        <item name="windowActionBarOverlay">true</item>
+        <!-- Hacer el fondo de la ventana del contenido transparente -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- Estilo del ActionBar -->
+        <item name="actionBarStyle">@style/TransparentActionBar</item>
+    </style>
+
+    <!-- Estilo personalizado para hacer el ActionBar transparente -->
+    <style name="TransparentActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="background">@android:color/transparent</item>
+        <item name="android:elevation">0dp</item> <!-- Quitar sombra si es necesario -->
+    </style>
+
+
 </resources>

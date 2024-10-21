@@ -96,6 +96,8 @@
     <Button
         android:id="@+id/Continue"
         android:text="@string/Continue"
+        android:onClick="openMain"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toStartOf="@id/guia2"
         app:layout_constraintStart_toStartOf="@id/guia1"
         app:layout_constraintTop_toBottomOf="@id/fill2"
@@ -106,6 +108,7 @@
     <Button
         android:id="@+id/Back"
         android:text="@string/back"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toStartOf="@id/guia2"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@id/guia1"
@@ -118,6 +121,7 @@
         android:id="@+id/button"
         android:text="@string/registrarse"
         android:onClick="openSingUp"
+        android:layout_height="wrap_content"
         app:cornerRadius="0dp"
         app:layout_constraintBottom_toBottomOf="@id/main"
         app:layout_constraintEnd_toEndOf="@id/main"

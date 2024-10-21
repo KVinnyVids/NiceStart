@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.5"
-        android:scaleType="center"
+        android:scaleType="fitCenter"
         android:src="@drawable/galleta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -43,7 +43,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:alpha="0.0"
-        android:background="@color/Purple" />
+        android:background="@color/Purple"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="217dp" />
 
     <ImageView
         android:id="@+id/Img"
@@ -104,43 +106,27 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
         android:text="@string/Continue"
+        android:onClick="openMain"
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@id/guia2"
         app:layout_constraintStart_toStartOf="@id/guia1"
         app:layout_constraintTop_toBottomOf="@id/fill2"
-        app:layout_constraintBottom_toTopOf="@id/Back"
+        app:layout_constraintBottom_toTopOf="@id/Registrar"
         app:cornerRadius="0dp"
         />
 
     <Button
-        android:id="@+id/Back"
+        android:id="@+id/Registrar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/Pink"
-        android:text="@string/back"
-        android:textColor="@color/black"
-        android:alpha="1"
+        android:backgroundTint="@color/Lavanda"
+        android:text="@string/registrarse"
+        android:onClick="openSingUp"
+        app:cornerRadius="0dp"
         app:layout_constraintEnd_toStartOf="@id/guia2"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@id/guia1"
         app:layout_constraintTop_toBottomOf="@id/Continue"
-        app:layout_constraintVertical_chainStyle="packed"
-        app:cornerRadius="0dp"
-        />
-
-
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/Lavanda"
-        android:text="@string/registrarse"
-        app:cornerRadius="0dp"
-        app:layout_constraintBottom_toBottomOf="@id/main"
-        app:layout_constraintEnd_toEndOf="@id/main"
-        app:layout_constraintStart_toStartOf="@id/main"
-
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,13 +23,6 @@
         app:layout_constraintGuide_percent="0.80" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guia3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guia4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -129,17 +122,20 @@
     <Button
         android:id="@+id/Continue"
         android:text="@string/Continue"
+        android:onClick="openMain"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toStartOf="@id/guia2"
         app:layout_constraintStart_toStartOf="@id/guia1"
         app:layout_constraintTop_toBottomOf="@id/fill4"
-        app:layout_constraintBottom_toTopOf="@id/Back"
+        app:layout_constraintBottom_toTopOf="@id/Cancel"
         app:cornerRadius="0dp"
         style="@style/FlatButton_Continue" />
 
     <Button
-        android:id="@+id/Back"
-        android:text="@string/back"
+        android:id="@+id/Cancel"
+        android:text="@string/cancel"
         android:onClick="openLogIn"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toStartOf="@id/guia2"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@id/guia1"

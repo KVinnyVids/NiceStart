@@ -27,4 +27,12 @@ public class LogIn extends AppCompatActivity {
         Intent intent = new Intent(LogIn.this,SingUp.class);
         startActivity(intent);
     }
+    public void openMain(View v){
+        Intent intent = new Intent(LogIn.this,MainActivity.class);
+        startActivity(intent);
+    }
+    public void openLogIn(View view) {
+        Intent intent = new Intent(LogIn.this,LogIn.class);
+        startActivity(intent);
+    }
 }

@@ -23,22 +23,16 @@
         app:layout_constraintGuide_percent="0.80" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guia3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
-
-    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guia4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.20" />
+        app:layout_constraintGuide_percent="0.16" />
 
     <ImageView
         android:id="@+id/galleta"
         android:src="@drawable/galleta"
+        android:scaleType="fitCenter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         style="@style/bgimg" />
@@ -51,9 +45,9 @@
 
     <ImageView
         android:id="@+id/Img"
-        android:layout_width="124dp"
-        android:layout_height="124dp"
-        android:layout_margin="40dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
         android:src="@drawable/ic_cookie_sing_up"
         app:layout_constraintBottom_toBottomOf="@id/guia4"
         app:layout_constraintEnd_toEndOf="@id/guia2"
@@ -65,7 +59,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toStartOf="@id/fill2"
         app:layout_constraintStart_toStartOf="@id/guia1"
         app:layout_constraintTop_toBottomOf="@id/guia4"
@@ -82,7 +76,7 @@
         android:id="@+id/fill2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="5dp"
         app:layout_constraintEnd_toEndOf="@id/guia2"
         app:layout_constraintStart_toEndOf="@id/fill"
@@ -134,6 +128,8 @@
     <Button
         android:id="@+id/Continue"
         android:text="@string/Continue"
+        android:onClick="openMain"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toStartOf="@id/guia2"
         app:layout_constraintStart_toStartOf="@id/guia1"
         app:layout_constraintTop_toBottomOf="@id/fill4"
@@ -145,6 +141,7 @@
         android:id="@+id/Back"
         android:text="@string/back"
         android:onClick="openLogIn"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toStartOf="@id/guia2"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="@id/guia1"
