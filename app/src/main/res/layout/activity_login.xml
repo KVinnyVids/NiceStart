@@ -38,10 +38,11 @@
 
     <ImageView
         android:id="@+id/galleta"
-        android:src="@drawable/galleta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        style="@style/bgimg" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.5"/>
 
     <View
         android:layout_width="match_parent"

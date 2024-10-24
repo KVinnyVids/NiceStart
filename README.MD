@@ -15,8 +15,6 @@ MainMenu
 
 ![img.png](ImgApp/MainMenu.png)
 
-
-
 Hope you enjoy it! -_-
 
 By KVinnyVids.

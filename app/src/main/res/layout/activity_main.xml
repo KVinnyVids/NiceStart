@@ -35,7 +35,8 @@
         app:layout_constraintTop_toTopOf="parent"
         android:scaleType="fitCenter"
         android:alpha="0.2"
-        style="@style/bgimg" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
 
