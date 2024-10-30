@@ -10,7 +10,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/cookie"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/cookie_foreground"
+        android:roundIcon="@drawable/galleta"
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.AntiVirus"
         tools:targetApi="31">

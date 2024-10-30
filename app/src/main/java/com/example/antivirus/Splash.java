@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,9 +30,15 @@ public class Splash extends AppCompatActivity {
         openApp();
 
         ImageView cookie = findViewById(R.id.logosplash);
+        TextView nice = findViewById(R.id.nice);
+        TextView start = findViewById(R.id.start);
 
-        Animation myanim= AnimationUtils.loadAnimation(this, R.anim.blink);
-        cookie.startAnimation(myanim);
+        Animation zoomcookie= AnimationUtils.loadAnimation(this, R.anim.zoomin);
+        Animation niceanim= AnimationUtils.loadAnimation(this, R.anim.enterleft);
+        Animation startanim= AnimationUtils.loadAnimation(this, R.anim.enterringht);
+        cookie.startAnimation(zoomcookie);
+        nice.startAnimation(niceanim);
+        start.startAnimation(startanim);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

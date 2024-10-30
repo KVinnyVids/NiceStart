@@ -26,14 +26,29 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
+        android:id="@+id/nice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/dangrek"
-        android:text="@string/nicestart"
+        android:fontFamily="@font/adlam_display"
+        android:text="@string/nice"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toStartOf="@id/start"
+        app:layout_constraintStart_toStartOf="@id/logosplash"
+        app:layout_constraintTop_toBottomOf="@id/logosplash">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/adlam_display"
+        android:text="@string/start"
         android:textColor="@color/black"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="@id/logosplash"
-        app:layout_constraintStart_toStartOf="@id/logosplash"
+        app:layout_constraintStart_toEndOf="@id/nice"
         app:layout_constraintTop_toBottomOf="@id/logosplash">
 
     </TextView>

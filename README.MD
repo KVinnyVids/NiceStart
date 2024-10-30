@@ -25,6 +25,9 @@ Splash
 
 ![img.png](ImgApp/Splash.png)
 
+Now the splash screen has new animations
+
+![](ImgApp/Splash.gif)
 
 Hope you enjoy it! -_-
 
