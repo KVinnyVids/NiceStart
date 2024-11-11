@@ -1,48 +1,57 @@
 package com.example.antivirus;
 
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
-        ImageView bCookie=findViewById(R.id.galleta);
-        Glide.with(this)
-                .load("https://images.unsplash.com/photo-1519682214708-973477a2529a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-                .transition(DrawableTransitionOptions
-                        .withCrossFade(2000))
-                .centerCrop()
-                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.Purple)))
-                .into(bCookie);
+		super.onCreate(savedInstanceState);
+		EdgeToEdge.enable(this);
+		setContentView(R.layout.activity_main);
+		ImageView bCookie = findViewById(R.id.rodillo);
+		Glide.with(this)
+				.load("https://images.unsplash.com/photo-1519682214708-973477a2529a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+				.transition(DrawableTransitionOptions
+						.withCrossFade(2000))
+				.centerCrop()
+				.placeholder(new ColorDrawable(this.getResources().getColor(R.color.Purple)))
+				.into(bCookie);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-	    ConstraintLayout mLayout = findViewById(R.id.myMainConstraint);
-	    ImageView men = findViewById(R.id.menu);
-	    registerForContextMenu(men);
+		ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+			Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+			v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+			return insets;
+		});
+		ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+			Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+			v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+			return insets;
+		});
 
+		ImageView men = findViewById(R.id.centerCookie);
+		registerForContextMenu(men);
+	}
 	    
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu){
@@ -51,16 +60,20 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(@NotNull MenuItem item){
+	public boolean onOptionsItemSelected(@NonNull MenuItem item){
+		ConstraintLayout mLayout = findViewById(R.id.main);
 		int id = item.getItemId();
-		if(id == R.id.item1){
-			Snackbar snackbar = Snackbar.make(mLayout,"Borrado",Snackbar.LENGTH_SHORT).setAction("jaja",new View.OnClickListener(){
-			 @Override
-			 public void onClick(View view){
-				 Snackbar snackbar1 = Snackbar.make(mLayout,"ok",Snackbar.LENGHT_SHORT);
-				 snackbar1.show();
-		 });
-			snackbar.show(); 
+		if(id == R.id.item1) {
+			Snackbar snackbar = Snackbar
+					.make(mLayout, "Borrado", Snackbar.LENGTH_SHORT)
+					.setAction("jaja", new View.OnClickListener() {
+						@Override
+						public void onClick(View view) {
+							Snackbar snackbar1 = Snackbar.make(mLayout, "ok", Snackbar.LENGTH_SHORT);
+							snackbar1.show();
+						}
+					});
+			snackbar.show();
 			return true;
 		}
 		if(id == R.id.item2){
@@ -71,13 +84,35 @@ public class MainActivity extends AppCompatActivity {
 		return false;
 	}
 
-	@Override
-	public void onCreateContextMenu(ContextMenu menu, View v,ContextMenu.ContextMenuInfo menuInfo){
-		getMenuInflater().inflate(R.menu.menu_context,menu);
+	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+		getMenuInflater().inflate(R.menu.menu_context, menu);
 	}
 
 	@Override
-	public boolean onContextItemSelected(MenuItem menu) {
-		
+	public boolean onContextItemSelected(MenuItem item) {
+		int id = item.getItemId();
+		if(id == R.id.item1) {
+			final ConstraintLayout mLayout = findViewById(R.id.main);
+			Snackbar snackbar = Snackbar
+					.make(mLayout, "fancy a Snack while you refresh?", Snackbar.LENGTH_LONG)
+					.setAction("UNDO", new View.OnClickListener() {
+						@Override
+						public void onClick(View view) {
+							Snackbar snackbar1 = Snackbar.make(mLayout, "Action is restored!", Snackbar.LENGTH_SHORT);
+							snackbar1.show();
+						}
+					});
+			snackbar.show();
+			return true;
+		}
+		if(id == R.id.item2) {
+			Toast toast2 = Toast.makeText(this, "Downloading item...",
+					Toast.LENGTH_LONG);
+			toast2.show();
+			return true;
+		}
+//                return super.onContextItemSelected(item);
+		return false;
 	}
+
 }
