@@ -13,4 +13,7 @@
     <string name="full_name">Full Name</string>
     <string name="cancel">Cancel</string>
     <string name="profile">PROFILE</string>
+    <string name="nicestart">NiceStart</string>
+    <string name="nice">Nice</string>
+    <string name="start">Start</string>
 </resources>
