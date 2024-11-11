@@ -39,5 +39,45 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
+	    ConstraintLayout mLayout = findViewById(R.id.myMainConstraint);
+	    ImageView men = findViewById(R.id.menu);
+	    registerForContextMenu(men);
+
+	    
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu){
+	  getMenuInflater().inflate(R.menu.menu_actionbar,menu);
+	  return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(@NotNull MenuItem item){
+		int id = item.getItemId();
+		if(id == R.id.item1){
+			Snackbar snackbar = Snackbar.make(mLayout,"Borrado",Snackbar.LENGTH_SHORT).setAction("jaja",new View.OnClickListener(){
+			 @Override
+			 public void onClick(View view){
+				 Snackbar snackbar1 = Snackbar.make(mLayout,"ok",Snackbar.LENGHT_SHORT);
+				 snackbar1.show();
+		 });
+			snackbar.show(); 
+			return true;
+		}
+		if(id == R.id.item2){
+			Intent intent = new Intent(this,Profile.class);
+			startActivity(intent);
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public void onCreateContextMenu(ContextMenu menu, View v,ContextMenu.ContextMenuInfo menuInfo){
+		getMenuInflater().inflate(R.menu.menu_context,menu);
+	}
+
+	@Override
+	public boolean onContextItemSelected(MenuItem menu) {
+		
+	}
 }
