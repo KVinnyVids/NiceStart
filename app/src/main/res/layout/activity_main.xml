@@ -28,26 +28,31 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.20" />
-    <ImageView
-        android:id="@+id/rodillo"
-        android:contentDescription="@string/todo"
-        android:src="@drawable/rodillo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="fitCenter"
-        android:alpha="0.2"
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/mySwipe"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/centerCookie"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_cookie"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <!--
+        <ImageView
+            android:id="@+id/rodillo"
+            android:contentDescription="@string/odo"
+            android:src="@drawable/rodillo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="fitCenter"
+            android:alpha="0.2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+         -->
 
+        <WebView
+            android:id="@+id/myWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </WebView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

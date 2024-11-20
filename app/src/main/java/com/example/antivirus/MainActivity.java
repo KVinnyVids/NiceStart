@@ -1,5 +1,6 @@
 package com.example.antivirus;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -7,28 +8,37 @@ import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
+
+	private SwipeRefreshLayout swipeLayout;
+	private WebView myWeb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		EdgeToEdge.enable(this);
 		setContentView(R.layout.activity_main);
+		/*
 		ImageView bCookie = findViewById(R.id.rodillo);
 		Glide.with(this)
 				.load("https://images.unsplash.com/photo-1519682214708-973477a2529a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
@@ -37,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 				.centerCrop()
 				.placeholder(new ColorDrawable(this.getResources().getColor(R.color.Purple)))
 				.into(bCookie);
-
+		*/
 		ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
 			Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
 			v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -49,8 +59,14 @@ public class MainActivity extends AppCompatActivity {
 			return insets;
 		});
 
-		ImageView men = findViewById(R.id.centerCookie);
-		registerForContextMenu(men);
+
+		swipeLayout = findViewById(R.id.mySwipe);
+		swipeLayout.setOnRefreshListener(mOnRefreshListener);
+		myWeb = (WebView) findViewById(R.id.myWebView);
+		WebSettings webSettings= myWeb.getSettings();
+		webSettings.setLoadWithOverviewMode(true);
+		webSettings.setUseWideViewPort(true);
+		myWeb.loadUrl("https://thispersondoesnotexist.com/");
 	}
 	    
 	@Override
@@ -65,7 +81,28 @@ public class MainActivity extends AppCompatActivity {
 		int id = item.getItemId();
 		if(id == R.id.item1) {
 			Snackbar snackbar = Snackbar
-					.make(mLayout, "Borrado", Snackbar.LENGTH_SHORT)
+					.make(mLayout, "Opciones", Snackbar.LENGTH_SHORT)
+					.setAction("Aceptar", new View.OnClickListener() {
+						@Override
+						public void onClick(View view) {
+							Snackbar snackbar1 = Snackbar.make(mLayout, "Ok", Snackbar.LENGTH_SHORT);
+							snackbar1.show();
+						}
+					});
+			snackbar.show();
+			return true;
+		}
+		if(id == R.id.item2){
+			Toast toast2 = Toast.makeText(this, "Profile",
+					Toast.LENGTH_LONG);
+			toast2.show();
+			Intent intent = new Intent(this,Profile.class);
+			startActivity(intent);
+			return true;
+		}
+		if(id == R.id.item3) {
+			Snackbar snackbar = Snackbar
+					.make(mLayout, "Not Available", Snackbar.LENGTH_SHORT)
 					.setAction("jaja", new View.OnClickListener() {
 						@Override
 						public void onClick(View view) {
@@ -76,43 +113,55 @@ public class MainActivity extends AppCompatActivity {
 			snackbar.show();
 			return true;
 		}
-		if(id == R.id.item2){
-			Intent intent = new Intent(this,Profile.class);
+		if(id == R.id.item4){
+
+			Toast toast2 = Toast.makeText(this, "Sing Out",
+					Toast.LENGTH_LONG);
+			toast2.show();
+			Intent intent = new Intent(this,LogIn.class);
 			startActivity(intent);
 			return true;
 		}
+		if(id == R.id.item5){
+			showAlertDialogueButtonClicked(this);
+		}
 		return false;
 	}
 
-	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-		getMenuInflater().inflate(R.menu.menu_context, menu);
-	}
 
-	@Override
-	public boolean onContextItemSelected(MenuItem item) {
-		int id = item.getItemId();
-		if(id == R.id.item1) {
-			final ConstraintLayout mLayout = findViewById(R.id.main);
-			Snackbar snackbar = Snackbar
-					.make(mLayout, "fancy a Snack while you refresh?", Snackbar.LENGTH_LONG)
-					.setAction("UNDO", new View.OnClickListener() {
-						@Override
-						public void onClick(View view) {
-							Snackbar snackbar1 = Snackbar.make(mLayout, "Action is restored!", Snackbar.LENGTH_SHORT);
-							snackbar1.show();
-						}
-					});
-			snackbar.show();
-			return true;
-		}
-		if(id == R.id.item2) {
-			Toast toast2 = Toast.makeText(this, "Downloading item...",
-					Toast.LENGTH_LONG);
-			toast2.show();
-			return true;
-		}
-//                return super.onContextItemSelected(item);
-		return false;
-	}
 
+	protected SwipeRefreshLayout.OnRefreshListener
+		mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
+		@Override
+		public void onRefresh() {
+			Toast toast = Toast.makeText(MainActivity.this, "Refreshing...", Toast.LENGTH_LONG);
+			toast.show();
+			myWeb.reload();
+			swipeLayout.setRefreshing(false);
+		}
+	};
+	public void showAlertDialogueButtonClicked(MainActivity mainAlert){
+		MaterialAlertDialogBuilder builder=new MaterialAlertDialogBuilder(MainActivity.this);
+		builder.setTitle("\"HE is looking at you, menacingly\"");
+		builder.setMessage("Why bother, are you sure?");
+		builder.setIcon(R.drawable.profile_img);
+		builder.setCancelable(false);
+
+		builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialogInterface, int i) {
+				System.exit(1);
+			}
+		});
+
+		builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+			@Override
+			public void onClick(DialogInterface dialogInterface, int i) {
+				dialogInterface.dismiss();
+			}
+		});
+
+		AlertDialog dialog = builder.create();
+		dialog.show();
+	}
 }

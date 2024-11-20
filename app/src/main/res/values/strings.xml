@@ -16,4 +16,5 @@
     <string name="nice">Nice</string>
     <string name="start">Start</string>
     <string name="todo">TODO</string>
+    <string name="exit">Exit</string>
 </resources>

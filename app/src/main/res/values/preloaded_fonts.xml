@@ -4,5 +4,7 @@
         <item>@font/</item>
         <item>@font/adlam_display</item>
         <item>@font/dangrek</item>
+        <item>@font/dynapuff</item>
+        <item>@font/sniglet</item>
     </array>
 </resources>

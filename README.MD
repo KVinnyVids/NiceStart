@@ -25,7 +25,7 @@ Splash
 
 ![img.png](ImgApp/Splash.png)
 
-Now the splash screen has new animations
+Now the splash screen has new animations, I added an overshoot animation to NiceStart and a zoom in to the logo.
 
 ![](ImgApp/Splash.gif)
 

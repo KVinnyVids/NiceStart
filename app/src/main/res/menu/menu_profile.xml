@@ -24,15 +24,9 @@
 
             <item
                 android:id="@+id/item4"
-                android:title="Sign Out"
+                android:title="Signout"
                 app:showAsAction="never"
                 android:icon="@drawable/galleta"/>
-
-            <item
-                android:id="@+id/item5"
-                android:title="@string/exit"
-                app:showAsAction="never"
-                android:icon="@drawable/exit_img"/>
 
         </menu>
 

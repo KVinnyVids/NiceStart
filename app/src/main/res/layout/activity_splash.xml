@@ -5,15 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
     tools:context=".Splash">
 
     <ImageView
         android:id="@+id/backView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="220dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/logosplash"
@@ -29,7 +29,7 @@
         android:id="@+id/nice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/adlam_display"
+        android:fontFamily="@font/sniglet"
         android:text="@string/nice"
         android:textColor="@color/black"
         android:textSize="50sp"
@@ -43,7 +43,7 @@
         android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/adlam_display"
+        android:fontFamily="@font/sniglet"
         android:text="@string/start"
         android:textColor="@color/black"
         android:textSize="50sp"
