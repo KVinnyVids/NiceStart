@@ -5,14 +5,16 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -23,6 +25,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.airbnb.lottie.LottieAnimationView;
+import com.airbnb.lottie.LottieCompositionFactory;
+import com.airbnb.lottie.LottieDrawable;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
@@ -32,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
 	private SwipeRefreshLayout swipeLayout;
 	private WebView myWeb;
+	private LottieAnimationView eye;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
 			v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
 			return insets;
 		});
-
 
 		swipeLayout = findViewById(R.id.mySwipe);
 		swipeLayout.setOnRefreshListener(mOnRefreshListener);
@@ -141,10 +146,23 @@ public class MainActivity extends AppCompatActivity {
 		}
 	};
 	public void showAlertDialogueButtonClicked(MainActivity mainAlert){
+
+		LayoutInflater inflater = LayoutInflater.from(this);
+		LinearLayout dialogView = (LinearLayout) inflater.inflate(R.layout.lottie_animation_eyeseeyou, null);
+		LottieAnimationView lottieAnimationView = dialogView.findViewById(R.id.eye);
+
+		LottieCompositionFactory.fromRawRes(this, R.raw.eyeseeyou)
+				.addListener(composition -> {
+					lottieAnimationView.setComposition(composition);
+					lottieAnimationView.playAnimation();
+					lottieAnimationView.pauseAnimation();
+				});
+		lottieAnimationView.playAnimation();
+
 		MaterialAlertDialogBuilder builder=new MaterialAlertDialogBuilder(MainActivity.this);
-		builder.setTitle("\"HE is looking at you, menacingly\"");
-		builder.setMessage("Why bother, are you sure?");
-		builder.setIcon(R.drawable.profile_img);
+		builder.setView(dialogView);
+		builder.setTitle("Eye see you");
+		builder.setMessage("Don't go!!!");
 		builder.setCancelable(false);
 
 		builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
@@ -160,8 +178,9 @@ public class MainActivity extends AppCompatActivity {
 				dialogInterface.dismiss();
 			}
 		});
-
 		AlertDialog dialog = builder.create();
 		dialog.show();
 	}
+
+
 }

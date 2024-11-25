@@ -37,6 +37,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation (libs.android.lottie)
     implementation(libs.androidx.swiperefreshlayout)
     testImplementation(libs.junit)
     implementation(libs.glide)
