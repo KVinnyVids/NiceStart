@@ -6,9 +6,11 @@
         <item name="android:windowIsTranslucent">true</item>
     </style>
 
+
     <style name="Theme.AntiVirus.ActionBar" parent="Theme.Material3.DayNight">
 
     </style>
+
 
     <style name="Theme.AntiVirus.ActionBar.Transparent" parent="Theme.MaterialComponents.DayNight">
         <!-- Mantener el ActionBar y hacerlo superponer el contenido -->
@@ -19,6 +21,7 @@
         <!-- Estilo del ActionBar -->
         <item name="actionBarStyle">@style/TransparentActionBar</item>
     </style>
+
 
     <!-- Estilo personalizado para hacer el ActionBar transparente -->
     <style name="TransparentActionBar" parent="Widget.AppCompat.ActionBar">

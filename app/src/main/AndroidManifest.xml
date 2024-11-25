@@ -36,7 +36,8 @@
 
         <activity
             android:name=".LogIn"
-            android:exported="true"/>
+            android:exported="true"
+            android:theme="@style/Theme.AntiVirus.ActionBar.Transparent" />
 
         <activity
             android:name=".Profile"
