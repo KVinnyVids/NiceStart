@@ -31,15 +31,15 @@ MainMenu
 Recently added the splash screen, a load screen before the LogIn screen.
 In here, I added a new blink animation to the icon, I tried to add a new font for the app
 
-Enlaces a las animaciones:
-[Nice](app/src/main/res/anim/enterringht.xml)
-[Start](app/src/main/res/anim/enterleft.xml)
-
 Splash
 
 ![img.png](ImgApp/Splash.png)
 
 Now the splash screen has new animations, I added an overshoot animation to NiceStart and a zoom in to the logo.
+
+Enlaces a las animaciones:
+[Nice](app/src/main/res/anim/enterringht.xml)
+[Start](app/src/main/res/anim/enterleft.xml)
 
 ![](ImgApp/Splash.gif)
 
