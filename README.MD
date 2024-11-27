@@ -16,6 +16,8 @@ The Menu for the app was empty and boring, now this menu shows a random face fro
 
 MainMenu
 
+[Enlaces de la animación](res/anim/enterleft.xml)
+
 ![img.png](ImgApp/MainMenu.png)
 
 ![img.png](ImgApp/Main_WebView.png)
