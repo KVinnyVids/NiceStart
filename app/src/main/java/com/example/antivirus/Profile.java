@@ -32,8 +32,8 @@ public class Profile extends AppCompatActivity {
             return insets;
         });
 
-        ImageView men = findViewById(R.id.centerCookie);
-        registerForContextMenu(men);
+        //ImageView men = findViewById(R.id.centerCookie);
+        //registerForContextMenu(men);
     }
 
 
