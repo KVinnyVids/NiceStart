@@ -39,6 +39,7 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation (libs.android.lottie)
     implementation(libs.androidx.swiperefreshlayout)
+    implementation(libs.androidx.cardview)
     testImplementation(libs.junit)
     implementation(libs.glide)
     annotationProcessor(libs.compiler)
