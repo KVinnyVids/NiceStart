@@ -86,8 +86,8 @@ public class MainActivity extends AppCompatActivity {
 		int id = item.getItemId();
 		if(id == R.id.item1) {
 			Snackbar snackbar = Snackbar
-					.make(mLayout, "Opciones", Snackbar.LENGTH_SHORT)
-					.setAction("Aceptar", new View.OnClickListener() {
+					.make(mLayout, R.string.opciones, Snackbar.LENGTH_SHORT)
+					.setAction(R.string.aceptar, new View.OnClickListener() {
 						@Override
 						public void onClick(View view) {
 							Snackbar snackbar1 = Snackbar.make(mLayout, "Ok", Snackbar.LENGTH_SHORT);
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 			return true;
 		}
 		if(id == R.id.item2){
-			Toast toast2 = Toast.makeText(this, "Profile",
+			Toast toast2 = Toast.makeText(this, R.string.profile,
 					Toast.LENGTH_LONG);
 			toast2.show();
 			Intent intent = new Intent(this,Profile.class);
@@ -107,8 +107,8 @@ public class MainActivity extends AppCompatActivity {
 		}
 		if(id == R.id.item3) {
 			Snackbar snackbar = Snackbar
-					.make(mLayout, "Not Available", Snackbar.LENGTH_SHORT)
-					.setAction("jaja", new View.OnClickListener() {
+					.make(mLayout, R.string.not_available, Snackbar.LENGTH_SHORT)
+					.setAction(R.string.jaja, new View.OnClickListener() {
 						@Override
 						public void onClick(View view) {
 							Snackbar snackbar1 = Snackbar.make(mLayout, "ok", Snackbar.LENGTH_SHORT);
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
 		}
 		if(id == R.id.item4){
 
-			Toast toast2 = Toast.makeText(this, "Sing Out",
+			Toast toast2 = Toast.makeText(this, R.string.sing_out,
 					Toast.LENGTH_LONG);
 			toast2.show();
 			Intent intent = new Intent(this,LogIn.class);

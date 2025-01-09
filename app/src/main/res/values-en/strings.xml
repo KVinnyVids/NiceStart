@@ -1,12 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AntiVirus</string>
-    <string name="jaja" translatable="false">Jaja</string>
-    <string name="jojo" translatable="false">jojo</string>
-    <string name="email" translatable="false">Email</string>
-    <string name="nicestart" translatable="false">NiceStart</string>
-    <string name="nice" translatable="false">Nice</string>
-    <string name="start" translatable="false">Start</string>
-    <string name="todo" translatable="false">TODO</string>
     <string name="password">Password</string>
     <string name="name">Name</string>
     <string name="Continue">Continue</string>
@@ -18,8 +12,8 @@
     <string name="cancel">Cancel</string>
     <string name="exit">Exit</string>
     <string name="log_in">Log In</string>
-    <string name="sign_in">Sign In</string>
-    <string name="opciones">Opciones</string>
+    <string name="sign_in">Sing In</string>
+    <string name="opciones">Options</string>
     <string name="aceptar">Aceptar</string>
     <string name="sing_out">Sing Out</string>
     <string name="not_available">Not Available</string>

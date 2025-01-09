@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AntiVirus</string>
+    <string name="password">Contraseña</string>
+    <string name="name">Nombre</string>
+    <string name="Continue">Continuar</string>
+    <string name="Back">Atrás</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="back">Atrás</string>
+    <string name="repeat_password">Repetir Contraseña</string>
+    <string name="full_name">Nombre Completo</string>
+    <string name="cancel">Cancelar</string>
+    <string name="exit">Salir</string>
+    <string name="log_in">Iniciar Sesion</string>
+    <string name="sign_in">Registrarse</string>
+    <string name="opciones">Opciones</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="sing_out">Sing Out</string>
+    <string name="not_available">Not Available</string>
+    <string name="profile">Profile</string>
+</resources>

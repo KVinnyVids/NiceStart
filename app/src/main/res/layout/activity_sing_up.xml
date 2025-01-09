@@ -43,6 +43,18 @@
         android:alpha="0.0"
         android:background="@color/Purple" />
 
+    <TextView
+        android:id="@+id/sign_In"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guia4"
+        app:layout_constraintEnd_toStartOf="@+id/guia2"
+        app:layout_constraintStart_toStartOf="@+id/guia1" />
+
     <ImageView
         android:id="@+id/Img"
         android:layout_width="124dp"
