@@ -151,12 +151,7 @@ public class MainActivity extends AppCompatActivity {
 		LinearLayout dialogView = (LinearLayout) inflater.inflate(R.layout.lottie_animation_eyeseeyou, null);
 		LottieAnimationView lottieAnimationView = dialogView.findViewById(R.id.eye);
 
-		LottieCompositionFactory.fromRawRes(this, R.raw.eyeseeyou)
-				.addListener(composition -> {
-					lottieAnimationView.setComposition(composition);
-					lottieAnimationView.playAnimation();
-					lottieAnimationView.pauseAnimation();
-				});
+
 		lottieAnimationView.playAnimation();
 
 		MaterialAlertDialogBuilder builder=new MaterialAlertDialogBuilder(MainActivity.this);
