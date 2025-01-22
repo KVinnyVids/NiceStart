@@ -3,15 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/item1"
+        android:title="Settings"
+        android:icon="@drawable/exit_img"
+        app:showAsAction="ifRoom"/>
+
+    <item
         android:id="@+id/item2"
         android:title="Profile"
         android:icon="@drawable/profile_img"
         app:showAsAction="ifRoom" />
 
+
     <item
-        android:id="@+id/item1"
-        android:title="Settings"
-        android:icon="@drawable/exit_img"
-        app:showAsAction="ifRoom">
-    </item>
+        android:id="@+id/item3"
+        android:title="Maps"
+        android:icon="@drawable/rodillo"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/item4"
+        android:title="Data"
+        android:icon="@drawable/galleta"
+        app:showAsAction="ifRoom"/>
 </menu>
