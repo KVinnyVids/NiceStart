@@ -1,6 +1,6 @@
 Hello Friend,
 This is my very first project in AndroidStudio.
-The app doesn't really work besides the buttons.
+The app doesn't really work besides the buttons and some features.
 
 The LogIn
 
