@@ -2,15 +2,30 @@ Hello Friend,
 This is my very first project in AndroidStudio.
 The app doesn't really work besides the buttons.
 
-LogIn
+The LogIn
 
 ![img_1.png](ImgApp/LogIn.png)
 
+and its landscape view
+
+![](ImgApp/LogInLandscapView.png)
+
+there is an spanish version of it too
+
+![](ImgApp/LogInSpanish.png)
 
 
 SingUp
 
 ![img.png](ImgApp/SingUp.png)
+
+and again the landscape view
+
+![](ImgApp/SignInLandscapView.png)
+
+and the spanish version
+
+![](ImgApp/SignInSpanish.png)
 
 The Menu for the app was empty and boring, now this menu shows a random face from the page https://thispersondoesnotexist.com/ using a WebView
 
@@ -34,6 +49,12 @@ In here, I added a new blink animation to the icon, I tried to add a new font fo
 Splash
 
 ![img.png](ImgApp/Splash.png)
+
+Now, if you’re wondering if there’s a dark theme, there is!
+
+![](ImgApp/DarkTheme.png)
+
+![](ImgApp/MainMenuDarkTheme.png)
 
 Now the splash screen has new animations, I added an overshoot animation to NiceStart and a zoom in to the logo.
 
@@ -90,6 +111,17 @@ public void showAlertDialogueButtonClicked(MainActivity mainAlert){
 The profile window had nothing but a cookie, and one of my friends (Vululo) modified it, now it displays like a card for the user.
 
 ![img.png](ImgApp/Modd_Vululo.png)
+
+There are some features that I haven't implemented directly in tho the app like this [BottomMenu](app/src/main/java/com/example/antivirus/MainBottomMenu.java)
+and the xml [BottomMenu.xml](app/src/main/res/layout/activity_main_bottom_menu.xml)
+
+![](ImgApp/BottomMenu.png)
+
+or this [BottomNavigation](app/src/main/java/com/example/antivirus/MainBn.java)
+with the xml [BottomNavigation.xml](app/src/main/res/layout/activity_main_bn.xml)
+
+![](ImgApp/BottomNavigation.png)
+
 
 Hope you enjoy it! -_-
 
