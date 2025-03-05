@@ -112,7 +112,7 @@ The profile window had nothing but a cookie, and one of my friends (Vululo) modi
 
 ![img.png](ImgApp/Modd_Vululo.png)
 
-There are some features that I haven't implemented directly in tho the app like this [BottomMenu](app/src/main/java/com/example/antivirus/MainBottomMenu.java)
+There are some features that I haven't implemented directly into the app like this [BottomMenu](app/src/main/java/com/example/antivirus/MainBottomMenu.java)
 and the xml [BottomMenu.xml](app/src/main/res/layout/activity_main_bottom_menu.xml)
 
 ![](ImgApp/BottomMenu.png)
